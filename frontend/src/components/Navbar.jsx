@@ -1,22 +1,21 @@
-import React from 'react'
+import React from "react";
 
 function Navbar() {
-    return (
-        <div className='w-full flex justify-between items-center h-20 bg-gray-300 shadow px-5'>
-            <div className='w-[10%] h-full flex items-center '>
-               <h2 className='font-bold text-zink-800'>skyR</h2>
-            </div>
+  return (
+    <div className="w-full flex flex-col md:flex-row justify-between items-center bg-gray-300 shadow px-4 py-3 md:h-20">
+      <div className="w-full md:w-auto flex justify-center md:justify-start items-center">
+        <h2 className="font-bold text-gray-800 text-2xl">skyR</h2>
+      </div>
 
-            <div className='w-[50%] h-full'>
-             <ul className='w-full h-full flex gap-6 list-none items-center text-zink-800 font-medium'>
-             <li className='curser-pointer'>HOME</li>
-             <li className='curser-pointer'>ABOUT</li>
-             <li className='curser-pointer'>CONTACT</li>
-             </ul>
-            </div>
-            
-        </div>
-    )
+      <div className="w-full md:w-auto mt-3 md:mt-0">
+        <ul className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 font-medium text-gray-800">
+          <li className="cursor-pointer">HOME</li>
+          <li className="cursor-pointer">ABOUT</li>
+          <li className="cursor-pointer">CONTACT</li>
+        </ul>
+      </div>
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;
