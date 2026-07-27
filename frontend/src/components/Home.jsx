@@ -88,9 +88,9 @@ function Home() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-80px)] w-full px-5">
+    <div className="min-h-[calc(100vh-80px)] w-full px-3 md:px-5">
       <form onSubmit={handleSubmit}>
-        <div className="w-full grid grid-cols-5 gap-3 my-4">
+        <div className="w-full grid grid-cols-1 grid-cols-5 gap-3 my-4">
           <div className="w-full flex flex-col gap-2">
             <label htmlFor="">Book Name</label>
             <input
@@ -147,20 +147,20 @@ function Home() {
             />
           </div>
         </div>
-        <div className=" w-full flex justify-end ">
+        <div className=" w-full flex justify-center md:justify-end ">
           <button
             type="submit"
-            className="text-white bg-blue-600 rounded-sm p-2 h-10 w-20"
+            className="text-white bg-blue-600 rounded-sm p-2 h-10 w-20 md:w-24"
           >
             {editId ? "UPDATE" : "SUBMIT"}
-            SUBMIT
+            
           </button>
         </div>
       </form>
 
       <div className="w-full mt-10">
-        <div className="w-full">
-          <table className="w-full bg-white divide-y divide-gray-200">
+        <div className="w-full overflow-x-auto">
+          <table className="min-w-[900px] bg-white divide-y divide-gray-200">
             <thead className="bg-green-100">
               <tr>
                 <th className="tracking-wider px-6 py-3 text-left text-xs font-medium text-gray-900">
@@ -202,7 +202,7 @@ function Home() {
                     <td className="px-6 py-3 whitespace-nowrap">
                       <div className="w-20 justify-center flex gap-5">
                         <div
-                          className="w-5 h-5 justify-center items-center bg-red-50 text-red-800"
+                          className="w-8 h-8 justify-center rounded items-center bg-red-50 text-red-800"
                           onClick={() => handleDelete(bok._id)}
                         >
                           <span>
@@ -210,7 +210,7 @@ function Home() {
                           </span>
                         </div>
                         <div
-                          className="w-5 h-5 justify-center items-center bg-green-100 text-green-800"
+                          className="w-5 h-5 justify-center items-center rounded bg-green-100 text-green-800"
                           onClick={() => {
                             setBook({
                               BookName: bok.BookName,
